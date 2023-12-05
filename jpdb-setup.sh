@@ -6,9 +6,6 @@
 PORT_CHECK=$(sudo lsof -i -P -n | grep :$3)
 n=${#PORT_CHECK}
 
-PORT_CHECK=$(sudo lsof -i -P -n | grep :$3)
-n=${#PORT_CHECK}
-
 #PORT CHECK, whether a particular port is open or not for use
 if [ $n -ne 0 ]
 then
