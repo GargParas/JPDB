@@ -27,7 +27,6 @@ cd jpdb
 
 wget https://raw.githubusercontent.com/GargParas/JPDB/main/jpdb-setup.sh
 
-chmod jpdb-setup.sh 755
+chmod 755 jpdb-setup.sh 
 
 ./jpdb-setup.sh parasgargl2x/jpdb-openjdk8-2gb data 5577
-
