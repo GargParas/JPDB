@@ -45,23 +45,10 @@ echo "jpdb.corsOrigin=*" >> config.properties
 echo "jpdb.corsMethods=*" >> config.properties
 echo "jpdb.corsHeaders=*" >> config.properties
 echo "jpdb.staticFilePath=../bin/public_html" >> config.properties
-echo "#" >> config.properties
-echo "# jpdb.maxThread=32" >> config.propertiesin;2
-echo "#" >> config.properties
-
-#Check if .jks file exists
-if [ -f "ssl.jks" ]
-then
-   echo "jpdb.keystoreFilePath=ssl.jks" >> config.properties
-   echo "jpdb.keystorePassword=Dits1HKD" >> config.properties
-   echo "jpdb.truststoreFilePath=" >> config.properties
-   echo "jpdb.truststorePassword=" >> config.properties
-else
-   echo "# jpdb.keystoreFilePath=ssl.jks" >> config.properties
-   echo "# jpdb.keystorePassword=Dits1HKD" >> config.properties
-   echo "# jpdb.truststoreFilePath=" >> config.properties
-   echo "# jpdb.truststorePassword=" >> config.properties
-fi
+echo "jpdb.keystoreFilePath=ssl.jks" >> config.properties
+echo "jpdb.keystorePassword=Dits1HKD" >> config.properties
+echo "jpdb.truststoreFilePath=" >> config.properties
+echo "jpdb.truststorePassword=" >> config.properties
 
 chmod a+rwx config.properties
 
