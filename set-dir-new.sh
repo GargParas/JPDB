@@ -16,7 +16,7 @@ else
 fi
 
 prefix='jpdb'
-folderName="${a}${1}"
+folderName="${prefix}${1}"
 echo "${folderName}"
 
 sudo apt-get update 
