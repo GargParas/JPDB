@@ -15,7 +15,8 @@ else
  echo "Port is Open for Use"
 fi
 
-folderName = "jpdb"+$1
+folder = "jpdb"
+folderName = "$folder $1"
 echo $folderName
 
 sudo apt-get update -y
