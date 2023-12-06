@@ -9,7 +9,7 @@ n=${#PORT_CHECK}
 #PORT CHECK, whether a particular port is open or not for use
 if [ $n -ne 0 ]
 then
- echo "Port is already in Use. Seems its already running."
+ echo "Port is already in Use. Please use different port."
  exit
 else
  echo "Port is Open for Use"
