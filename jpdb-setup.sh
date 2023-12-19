@@ -35,21 +35,41 @@ sudo docker pull $1
 
 cd $2
 
+if [ -f "runtime-config.properties" ]
+then
+echo "runtime-config.properties file exists"
+else
+touch runtime-config.properties
+echo "jpdb.threshold.ram.check=true" >> runtime-config.properties
+echo "jpdb.threshold.ram.warning=0.6" >> runtime-config.properties
+echo "jpdb.threshold.ram.error=0.8" >> runtime-config.properties
+echo "jpdb.ram.check.time=2" >> runtime-config.properties
+chmod a+rwx runtime-config.properties
+fi
+
+if [ -f "config.properties" ]
+then
+echo "config.properties file exists"
+else
 touch config.properties
-echo "jpdb.port=$3" > config.properties
+echo "jpdb.port=$3" >> config.properties
 echo "jpdb.maxThread=32" >> config.properties
 echo "jpdb.corsOrigin=*" >> config.properties
 echo "jpdb.corsMethods=*" >> config.properties
 echo "jpdb.corsHeaders=*" >> config.properties
 echo "jpdb.staticFilePath=../bin/public_html" >> config.properties
-echo "jpdb.keystoreFilePath=ssl.jks" >> config.properties
-echo "jpdb.keystorePassword=Dits1HKD" >> config.properties
+echo "jpdb.default.gmail.smtp.host=smtp.gmail.com" >> config.properties
+echo "jpdb.default.gmail.smtp.port=465" >> config.properties
+echo "jpdb.default.gmail.smtp.login=paras.garg.cse@gmail.com" >> config.properties
+echo "jpdb.default.gmail.smtp.appPassword=slpsdqfdgmjshayr" >> config.properties
+echo "jpdb.keystoreFilePath=./ssl.jks" >> config.properties
+echo "jpdb.keystorePassword=pw#l2x05" >> config.properties
 echo "jpdb.truststoreFilePath=" >> config.properties
 echo "jpdb.truststorePassword=" >> config.properties
-
 chmod a+rwx config.properties
+fi
 
 #Running the Container
 #sudo docker run --restart=always -p $3:$3 -v $(pwd)/:/home/jpdb/data $1 &
-sudo docker run -p $3:$3 -v $(pwd):/home/jpdb/data $1 &
-
+#sudo docker run -p $3:$3 -v $(pwd):/home/jpdb/data $1 &
+sudo docker run -m 1400m --memory-swap 2800m -p $3:$3 -v $(pwd):/home/jpdb/data $1 &
