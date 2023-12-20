@@ -29,7 +29,7 @@ sudo apt-get install \
 
 sudo mkdir -p /etc/apt/keyrings
 
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg -y
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg 
 
 echo \
   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
@@ -45,8 +45,12 @@ cd $home
 mkdir $folderName
 cd $folderName
 
+if [ -f "jpdb-setup.sh" ]
+then
+echo "jpdb-setup.sh file exists"
+else
 wget https://raw.githubusercontent.com/GargParas/JPDB/main/jpdb-setup.sh
-
-chmod 755 jpdb-setup.sh 
+chmod 755 jpdb-setup.sh
+fi
 
 ./jpdb-setup.sh parasgargl2x/jpdb-openjdk8-2gb:1 data $1
