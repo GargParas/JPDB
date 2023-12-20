@@ -1,4 +1,3 @@
-
 # $1 dockerImageName
 # $2 data folder for which the volume is to be set from the jpdb data folder running under docker image inside docker container.
 # $3 is port to be explosed from docker container.
@@ -42,7 +41,7 @@ else
 touch runtime-config.properties
 echo "jpdb.threshold.ram.check=true" >> runtime-config.properties
 echo "jpdb.threshold.ram.warning=0.6" >> runtime-config.properties
-echo "jpdb.threshold.ram.error=0.8" >> runtime-config.properties
+echo "jpdb.threshold.ram.error=0.9" >> runtime-config.properties
 echo "jpdb.ram.check.time=2" >> runtime-config.properties
 chmod a+rwx runtime-config.properties
 fi
