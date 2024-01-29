@@ -53,4 +53,4 @@ wget https://raw.githubusercontent.com/GargParas/JPDB/main/jpdb-setup.sh
 chmod 755 jpdb-setup.sh
 fi
 
-./jpdb-setup.sh parasgargl2x/jpdb-openjdk8-1280m:2 data $1
+./jpdb-setup.sh parasgargl2x/jpdb-for-testing:6 data $1
