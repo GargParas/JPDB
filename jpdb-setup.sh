@@ -52,15 +52,15 @@ echo "config.properties file exists"
 else
 touch config.properties
 echo "jpdb.port=$3" >> config.properties
-echo "jpdb.maxThread=32" >> config.properties
+echo "jpdb.maxThread=128" >> config.properties
 echo "jpdb.corsOrigin=*" >> config.properties
 echo "jpdb.corsMethods=*" >> config.properties
 echo "jpdb.corsHeaders=*" >> config.properties
 echo "jpdb.staticFilePath=../bin/public_html" >> config.properties
 echo "jpdb.default.gmail.smtp.host=smtp.gmail.com" >> config.properties
 echo "jpdb.default.gmail.smtp.port=465" >> config.properties
-echo "jpdb.default.gmail.smtp.login=paras.garg.cse@gmail.com" >> config.properties
-echo "jpdb.default.gmail.smtp.appPassword=slpsdqfdgmjshayr" >> config.properties
+echo "jpdb.default.gmail.smtp.login=noreply.login2xplore@gmail.com" >> config.properties
+echo "jpdb.default.gmail.smtp.appPassword=hgcrpbwwcnbuqafd" >> config.properties
 echo "jpdb.keystoreFilePath=./ssl.jks" >> config.properties
 echo "jpdb.keystorePassword=pw#l2x05" >> config.properties
 echo "jpdb.truststoreFilePath=" >> config.properties
