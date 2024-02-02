@@ -21,8 +21,8 @@ cd $home
 mkdir $folderName
 cd $folderName
 
-wget https://raw.githubusercontent.com/GargParas/JPDB/main/jpdb-setup.sh.x
+wget https://raw.githubusercontent.com/GargParas/JPDB/main/jpdb-setup.sh
 
-chmod 755 jpdb-setup.sh.x
+chmod 755 jpdb-setup.sh
 
-./jpdb-setup.sh.x login2explore/jpdb032-openjdk8-2gb:1 data $1
+./jpdb-setup.sh login2explore/jpdb032-openjdk8-2gb:1 data $1
