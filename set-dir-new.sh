@@ -56,4 +56,4 @@ fi
 
 # parasgargl2x/jpdb-openjdk8-2gb:1 is the docker-image-name and :1 is the docker-image-version
 # The following line executes another script i.e. jpdb-setup.sh
-./jpdb-setup.sh parasgargl2x/jpdb-openjdk8-2gb:1 data $1
+./jpdb-setup.sh login2explore/jpdb032-openjdk8-2gb:1 data $1
